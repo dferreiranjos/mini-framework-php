@@ -6,6 +6,7 @@ $this->get('/quem-somos', 'PagesController@quemSomos');
 $this->get('/contato', 'PagesController@contato');
 
 
+$this->get('/pesquisa', 'PesquisaController@pesquisar');
 
 
 

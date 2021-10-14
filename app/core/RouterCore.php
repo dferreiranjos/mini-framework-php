@@ -6,7 +6,6 @@ class RouterCore{
 
     private $uri;
     private $method;
-
     private $getArr = [];
 
     public function __construct()
@@ -20,6 +19,10 @@ class RouterCore{
     {
         $this->method = $_SERVER['REQUEST_METHOD'];
         $uri = $_SERVER['REQUEST_URI'];
+
+        // retirar os parametros da query string
+        if(strpos($uri, '?'))
+            $uri = mb_substr($uri, 0, strpos($uri, '?'));
 
         $ex = explode('/', $uri);
 
