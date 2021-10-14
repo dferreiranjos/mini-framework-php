@@ -9,7 +9,10 @@ class PesquisaController extends Controller
 {
     public function pesquisar()
     {
-        echo 'ola';
-        // dd(Input::get('pes'));
+        $param = Input::get('pes');
+
+        $this->load('pesquisa/main', [
+            'termo'=>$param
+        ]);
     }
 }
