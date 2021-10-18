@@ -18,6 +18,11 @@ class ProdutoController extends Controller
         $this->load('produto/novo');
     }
 
+    public function insert()
+    {
+        dd(Input::post('txtDescricao'));
+    }
+
     public function pesquisar()
     {
         $param = Input::get('pes');
