@@ -1,12 +1,13 @@
 <?php
 
 $this->get('/', 'PagesController@home');
-$this->get('/cep', 'PagesController@cep');
 $this->get('/quem-somos', 'PagesController@quemSomos');
 $this->get('/contato', 'PagesController@contato');
 
+$this->get('/produto', 'ProdutoController@index');
+$this->get('/novo-produto', 'ProdutoController@novo');
 
-$this->get('/pesquisa', 'PesquisaController@pesquisar');
+$this->get('/pesquisa', 'ProdutoController@pesquisar');
 
 
 

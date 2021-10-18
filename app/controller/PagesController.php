@@ -16,10 +16,10 @@ class PagesController extends Controller {
         $this->load('home/main');
     }
 
-    public function cep()
-    {
-        $this->load('cep/main');
-    }
+    // public function produto()
+    // {
+    //     $this->load('produto/main');
+    // }
 
     public function quemSomos()
     {
