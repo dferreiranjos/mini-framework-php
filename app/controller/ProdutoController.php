@@ -20,7 +20,8 @@ class ProdutoController extends Controller
 
     public function insert()
     {
-        dd(Input::post('txtDescricao'));
+        $params = $this->getInput();
+        dd($params);
     }
 
     public function pesquisar()
@@ -30,5 +31,14 @@ class ProdutoController extends Controller
         $this->load('produto/pesquisa', [
             'termo'=>$param
         ]);
+    }
+
+    private function getInput(){
+        return(object)[
+            'id'=>Input::get('id', FILTER_SANITIZE_NUMBER_INT),
+            'titulo'=>Input::post('txtTitulo'),
+            'imagem'=>Input::post('txtImagem'),
+            'descricao'=>Input::post('txtDescricao')
+        ];
     }
 }
