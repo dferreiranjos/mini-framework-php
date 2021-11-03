@@ -3,7 +3,7 @@
 {% block title %}Novo produto{% endblock %}
 
 {% block body %}
-    <div class="max-width center-screen bg-white padding">
+    <div class="max-width center-screen bg-white padding mt-3">
         <h1>Novo produto</h1>
         
         <hr>
@@ -11,8 +11,8 @@
         <form action="{{BASE}}insert-produto/" method="post">
 
             <div class="mt-3">
-                <label for="txtTitulo">Nome do Produto</label>
-                <input type="text" id="txtTitulo" name="txtTitulo" class="form-control" placeholder="Placa de vídeo" required>
+                <label for="txtNome">Nome do Produto</label>
+                <input type="text" id="txtNome" name="txtNome" class="form-control" placeholder="Placa de vídeo" required>
             </div>
 
             <div class="mt-3">

@@ -8,3 +8,9 @@ function dd($params = [], $die = true)
 
     if($die) die();
 }
+
+function redirect(string $url)
+{
+    header('Location: '.$url);
+    exit;
+}
